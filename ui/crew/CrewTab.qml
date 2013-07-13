@@ -18,7 +18,6 @@ Tab{
 	    id: roster
 	    title: i18n.tr("Roster")
 	    visible: false
-	    tools: CrewToolbar{}
 
 	    CrewListView{
 		anchors.fill: parent
