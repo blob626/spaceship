@@ -23,24 +23,16 @@ MainView {
     //automaticOrientation: true
     
     width: units.gu(100)
-    height: units.gu(75)
+    height: units.gu(50)
     
     Tabs {
         id: tabs
         
-        // HelloTab {
-        //     objectName: "helloTab"
-        // }
-        
-        // WorldTab {
-        //     objectName: "worldTab"
-        // }
-
-	CargoTab{
-	}
-	
 	CrewTab{
 	    objectName: "crewTab"
+	}
+
+	CargoTab{
 	}
     }
 }
