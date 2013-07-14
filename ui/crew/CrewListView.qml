@@ -1,18 +1,14 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 
-Item{
+ListView{
     signal itemClicked(var model)
+    model: CrewModel{}
 
-    ListView{
-
-	model: CrewModel{}
-
-	delegate: CrewItem{
+    delegate: CrewItem{
 	
-	    onClicked:{
-		itemClicked(model)
-	    }
+	onClicked:{
+	    itemClicked(model)
 	}
     }
 }
