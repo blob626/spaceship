@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import "ui"
 import "ui/crew"
+import "ui/cargo"
 /*!
     \brief MainView with Tabs element.
            First Tab has a single Label and
@@ -35,6 +36,9 @@ MainView {
         //     objectName: "worldTab"
         // }
 
+	CargoTab{
+	}
+	
 	CrewTab{
 	    objectName: "crewTab"
 	}
