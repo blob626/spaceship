@@ -2,22 +2,26 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 
 ListModel{
-    ListElement{
-	name: "adam"
-	job: "steering"
-	test: "blah"
-	portrait: "../../graphics/toolbarIcon.png"
-    }
-    ListElement{
-	name: "eve"
-	job: "weapons"
-	test: "beagh"
-	portrait: "../../graphics/toolbarIcon.png"
+    id: model
+
+    signal loadCompleted()
+
+    Component.onCompleted:{
+	var xhr = new XMLHttpRequest;
+	xhr.open("GET", "../../test");
+	xhr.onreadystatechange = function(){
+	    if(xhr.readyState == XMLHttpRequest.DONE){
+		var a = JSON.parse(xhr.responseText);
+		for (var b in a){
+		    var o =a[b];
+		    model.append({name: o.name,
+				  profession: o.profession,
+				  portrait: o.portrait,
+				  species: o.species })
+		}
+		model.loadCompleted()
+	    }
+	}
+	xhr.send()
     }
 }
-
-// JSON.JSONListModel{
-//     id: crewSource
-//     source: Qt.resolvedUrl("../../test")
-//     query: "[*]"
-// }

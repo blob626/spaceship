@@ -6,6 +6,6 @@ Item{
 
     Label{
 	id: label
-	text: model.test
+	text: model.species
     }
 }

@@ -5,6 +5,6 @@ import Ubuntu.Components.ListItems 0.1 as ListItem
 ListItem.Subtitled{
     icon: Qt.resolvedUrl(portrait)
     text: name
-    subText: job
+    subText: profession
     progression: true
 }
