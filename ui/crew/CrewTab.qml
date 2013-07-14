@@ -7,28 +7,27 @@ Tab{
     PageStack{
 	id: pageStack
 
-	Component.onCompleted: push(roster)
+	Component.onCompleted: push(rosterPage)
 	
 	Page{
-	    id: roster
+	    id: rosterPage
 	    title: i18n.tr("Roster")
 	    visible: false
 
 	    CrewListView{
 		anchors.fill: parent
 		onItemClicked:{
-		    label.text = model.test
-		    pageStack.push(crewView)
+		    crewView.model = model
+		    pageStack.push(crewViewPage)
 		}
 	    }
 	}
 	
 	Page{
-	    id: crewView
+	    id: crewViewPage
 	    visible: false
-	    Label{
-		id: label
-		text: "test"
+	    CrewView{
+		id: crewView
 	    }
 	}
     }
