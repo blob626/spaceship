@@ -6,7 +6,7 @@ import "../../libraries/name.js" 0.1 as Name
 
 ListItem.Subtitled{
     icon: Qt.resolvedUrl(portrait)
-    text: Name.first(name)
+    text: Name.first_last(name)
     subText: profession
     progression: true
 }

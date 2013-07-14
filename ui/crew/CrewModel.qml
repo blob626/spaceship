@@ -17,7 +17,13 @@ ListModel{
 		    model.append({name: o.name,
 				  profession: o.profession,
 				  portrait: o.portrait,
-				  species: o.species })
+				  species: o.species,
+				  gender: o.gender,
+				  description: o.description,
+				  preferences: o.preferences,
+				  story: o.story,
+				  history: o.history
+				 })
 		}
 		model.loadCompleted()
 	    }
