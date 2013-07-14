@@ -1,0 +1,22 @@
+[
+    {"name": {"first": "adam"},
+     "profession": "steering",
+     "species": "human",
+     "portrait": "../../graphics/toolbarIcon.png",
+     "gender": "male",
+     "description": "A bellybottunless man",
+     "preferences": "Likes oranges",
+     "story": "the first man",
+     "history": "stuff"
+    },
+    {"name": {"first": "eve"},
+     "profession": "weapons",
+     "species": "human",
+     "portrait": "../../graphics/toolbarIcon.png",
+     "gender": "female",
+     "description": "A bellybuttonless woman",
+     "preferences": "Likes apples",
+     "story": "the first woman",
+     "history": "stuff"
+    }
+]
