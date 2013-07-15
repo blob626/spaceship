@@ -19,10 +19,10 @@ def random_name(first_names, last_names):
     last = random.choice(last_names)
     return {"first": first, "last": last}
     
-def random_names(num):
-    first_names = name_list(first_file)
-    last_names = name_list(last_file)
-    return [random_name(first_names, last_names) for i in range(num)]
-        
+def random_names(num, first=first_file, last=last_file):
+    first_names = name_list(first)
+    last_names = name_list(last)
+    return [random_name(first_names, last_names) for i in range(num)]    
+    
 names = random_names(3)
 print(json.dumps(names))
