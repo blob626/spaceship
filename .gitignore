@@ -1,4 +1,10 @@
+# project specific
 /spaceship.qmlproject.user
+
+# editor specific
 *~
 \#*\#
 *.\#*
+
+# python specific
+*.pyc
